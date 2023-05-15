@@ -7,10 +7,14 @@
 
 @file:Suppress("UnstableApiUsage")
 
-plugins {
-  donedone("android-application")
-}
+rootProject.name = "build-logic"
 
-android {
-  namespace = "me.donedone.android"
+enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
+
+dependencyResolutionManagement {
+  versionCatalogs {
+    create("libs") {
+      from(files("../gradle/libs.versions.toml"))
+    }
+  }
 }

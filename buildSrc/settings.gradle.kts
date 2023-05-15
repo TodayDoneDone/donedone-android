@@ -5,12 +5,4 @@
  * Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
  */
 
-@file:Suppress("UnstableApiUsage")
-
-plugins {
-  donedone("android-application")
-}
-
-android {
-  namespace = "me.donedone.android"
-}
+rootProject.name = "buildSrc"
