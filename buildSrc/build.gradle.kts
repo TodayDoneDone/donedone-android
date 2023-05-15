@@ -5,12 +5,11 @@
  * Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
  */
 
-@file:Suppress("UnstableApiUsage")
-
 plugins {
-  donedone("android-application")
+  `kotlin-dsl`
 }
 
-android {
-  namespace = "me.donedone.android"
+repositories {
+  mavenCentral()
+  gradlePluginPortal()
 }
