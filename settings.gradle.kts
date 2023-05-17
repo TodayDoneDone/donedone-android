@@ -28,4 +28,7 @@ buildCache {
   }
 }
 
-include(":app")
+include(
+  ":app",
+  ":feature:done-wrtie",
+)
