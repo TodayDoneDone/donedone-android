@@ -14,3 +14,7 @@ plugins {
 android {
   namespace = "me.donedone.android"
 }
+
+dependencies {
+  implementation(project(":waffle-android"))
+}
