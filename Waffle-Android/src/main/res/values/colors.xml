@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Designed and developed by DoneDone Team 2023.
+  ~
+  ~ Licensed under the MIT.
+  ~ Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
+  -->
+
+<resources>
+    <color name="color_primary_blue_01">#2347F3</color>
+    <color name="color_base_white_01">#F5F5F5</color>
+    <color name="color_base_black_01">#1C1C1C</color>
+    <color name="color_base_gray_01">#DBDBDB</color>
+</resources>

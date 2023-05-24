@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Designed and developed by DoneDone Team 2023.
+  ~
+  ~ Licensed under the MIT.
+  ~ Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
+  -->
+
+<resources>
+
+    <dimen name="waffle_control_corner_material">18dp</dimen>
+    <dimen name="waffle_text_size_button_material">18sp</dimen>
+    <dimen name="waffle_btn_background_padding_vertical">10dp</dimen>
+    <dimen name="waffle_btn_background_padding_start">16dp</dimen>
+    <dimen name="waffle_btn_background_padding_end">8dp</dimen>
+
+    <dimen name="waffle_button_inset_horizontal_material">4dp</dimen>
+    <dimen name="waffle_button_inset_vertical_material">6dp</dimen>
+</resources>
