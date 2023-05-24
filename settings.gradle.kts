@@ -28,5 +28,8 @@ buildCache {
   }
 }
 
-include(":app")
+include(
+  ":app",
+  ":waffle",
+)
 include(":waffle-android")
