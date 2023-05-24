@@ -8,14 +8,14 @@
 package me.donedone.android
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
 import android.view.ContextThemeWrapper
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import me.donedone.waffle.android.widget.WaffleButton
 
-class MainActivity : Activity() {
+class MainActivity : AppCompatActivity() {
   @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ class MainActivity : Activity() {
           WaffleButton(
             ContextThemeWrapper(
               context,
-              android.R.style.Widget_Button,
+              androidx.appcompat.R.style.Widget_AppCompat_Button,
             ),
           )
             .apply {

@@ -7,14 +7,12 @@
 
 package me.donedone.waffle.android.widget
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.Button
+import androidx.appcompat.widget.AppCompatButton
 
-@SuppressLint("AppCompatCustomView")
 class WaffleButton @JvmOverloads constructor(
   context: Context,
   attrs: AttributeSet? = null,
   defStyleAttr: Int = 0,
-) : Button(context, attrs, defStyleAttr)
+) : AppCompatButton(context, attrs, defStyleAttr)
