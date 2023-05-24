@@ -9,7 +9,8 @@ package me.donedone.android
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.ContextThemeWrapper
+import android.os.Handler
+import android.os.Looper
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -30,17 +31,49 @@ class MainActivity : AppCompatActivity() {
         )
         addView(
           WaffleButton(
-            ContextThemeWrapper(
-              context,
-              androidx.appcompat.R.style.Widget_AppCompat_Button,
-            ),
+            context,
+            WaffleButton.PrimaryViewStyle,
           )
             .apply {
               layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT,
               )
-              text = "WaffleButton"
+              text = "WaffleButton Primary"
+            },
+        )
+        addView(
+          WaffleButton(
+            context,
+            WaffleButton.DefaultViewStyle,
+          )
+            .apply {
+              layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+              )
+              text = "WaffleButton Default"
+              setOnClickListener {
+                it.isEnabled = false
+                Handler(Looper.getMainLooper()).postDelayed(
+                  {
+                    it.isEnabled = true
+                  }, 10000L,
+                )
+              }
+            },
+        )
+        addView(
+          WaffleButton(
+            context,
+            WaffleButton.DoneViewStyle,
+          )
+            .apply {
+              layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+              )
+              text = "WaffleButton Done"
             },
         )
       },

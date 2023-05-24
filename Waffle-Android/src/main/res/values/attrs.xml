@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WaffleButton">
+        <attr name="waffleButtonStyle" format="enum">
+            <enum name="Default" value="0"/>
+            <enum name="Primary" value="1"/>
+            <enum name="Done" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
