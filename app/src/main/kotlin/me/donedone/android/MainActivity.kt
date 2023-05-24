@@ -17,6 +17,10 @@ import androidx.appcompat.app.AppCompatActivity
 import me.donedone.waffle.android.widget.WaffleButton
 
 class MainActivity : AppCompatActivity() {
+  companion object {
+    const val TEN_SECOND = 10000L
+  }
+
   @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -58,7 +62,8 @@ class MainActivity : AppCompatActivity() {
                 Handler(Looper.getMainLooper()).postDelayed(
                   {
                     it.isEnabled = true
-                  }, 10000L,
+                  },
+                  TEN_SECOND,
                 )
               }
             },
