@@ -26,7 +26,7 @@ class WaffleButton @JvmOverloads constructor(
 
     private const val NONE = -1
 
-    fun Context.applyWaffleStyle(attrs: AttributeSet?): Context {
+    private fun Context.applyWaffleStyle(attrs: AttributeSet?): Context {
       var styleRes: Int? = null
       withStyledAttributes(
         set = attrs,
