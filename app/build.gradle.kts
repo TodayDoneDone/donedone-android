@@ -16,7 +16,7 @@ android {
 }
 
 dependencies {
-  implementation(project(":waffle-android"))
+  implementation(project(":waffle"))
 
   implementation(libs.appcompat)
 }

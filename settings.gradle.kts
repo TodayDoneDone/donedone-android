@@ -32,4 +32,3 @@ include(
   ":app",
   ":waffle",
 )
-include(":waffle-android")
