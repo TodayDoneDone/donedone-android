@@ -1,4 +1,5 @@
 [versions]
+appcompat = "1.6.1"
 gradle-android = "8.0.1"
 gradle-dependency-handler-extensions = "1.1.0"
 
@@ -15,6 +16,7 @@ kotlin-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "kotlin-dete
 kotlin-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "kotlin-ktlint-gradle" }
 
 [libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 gradle-android = { module = "com.android.tools.build:gradle", version.ref = "gradle-android" }
 
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-core" }

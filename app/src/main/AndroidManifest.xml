@@ -10,6 +10,7 @@
 
     <application
         android:label="DoneDone"
+        android:theme="@style/WaffleTheme"
         tools:ignore="MissingApplicationIcon">
 
         <activity

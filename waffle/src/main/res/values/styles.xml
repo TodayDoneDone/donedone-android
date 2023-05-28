@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Designed and developed by DoneDone Team 2023.
+  ~
+  ~ Licensed under the MIT.
+  ~ Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
+  -->
+
+<resources>
+
+    <style name="Waffle.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/waffle_btn_default_mtrl_shape</item>
+        <item name="android:backgroundTintMode">multiply</item>
+        <item name="android:textAppearance">@style/Waffle.Button.TextAppearance</item>
+    </style>
+
+    <style name="Waffle.Button.Default" parent="Waffle.Button">
+        <item name="android:backgroundTint">@color/color_default_button</item>
+        <item name="drawableEndCompat">@drawable/baseline_navigate_next_24</item>
+        <item name="drawableTint">@color/color_base_white_01</item>
+    </style>
+
+    <style name="Waffle.Button.Primary" parent="Waffle.Button">
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="drawableEndCompat">@drawable/baseline_add_24</item>
+        <item name="drawableTint">@color/color_base_white_01</item>
+    </style>
+
+    <style name="Waffle.Button.Done" parent="Waffle.Button.Default">
+        <item name="drawableEndCompat">@drawable/baseline_check_24</item>
+    </style>
+
+    <style name="Waffle.Button.TextAppearance" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textSize">@dimen/waffle_text_size_button_material</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_base_white_01</item>
+    </style>
+</resources>
