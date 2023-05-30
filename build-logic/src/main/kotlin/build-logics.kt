@@ -18,6 +18,8 @@ import internal.configureGmd
 import internal.libs
 import internal.androidExtensions
 import internal.isAndroidProject
+import internal.setupAndroidxTest
+import internal.setupEspresso
 import internal.setupJunit
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -98,6 +100,12 @@ internal class TestJUnitPlugin : BuildLogicPlugin({
     setupJunit(
       core = libs.findLibrary("test-junit-core").get(),
       engine = libs.findLibrary("test-junit-engine").get(),
+    )
+    setupEspresso(
+      espressoCore = libs.findLibrary("androidx-test-espresso-core").get(),
+    )
+    setupAndroidxTest(
+      junitExt = libs.findLibrary("androidx-test-ext").get(),
     )
   }
 })

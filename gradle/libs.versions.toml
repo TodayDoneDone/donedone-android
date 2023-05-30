@@ -1,4 +1,6 @@
 [versions]
+androidxEspresso = "3.5.1"
+androidxTestExt = "1.1.5"
 appcompat = "1.6.1"
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
@@ -16,6 +18,8 @@ kotlin-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "kotlin-dete
 kotlin-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "kotlin-ktlint-gradle" }
 
 [libraries]
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 gradle-android = { module = "com.android.tools.build:gradle", version.ref = "gradle-android" }
 

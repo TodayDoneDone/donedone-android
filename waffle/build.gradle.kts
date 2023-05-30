@@ -20,6 +20,10 @@ plugins {
 
 android {
   namespace = "me.donedone.waffle.android"
+
+  defaultConfig {
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+  }
 }
 
 dependencies {

@@ -35,3 +35,11 @@ internal inline fun DependencyHandler.setupJunit(core: Any, engine: Any) {
   add("testImplementation", core)
   add("testRuntimeOnly", engine)
 }
+
+internal inline fun DependencyHandler.setupEspresso(espressoCore: Any) {
+  add("androidTestImplementation", espressoCore)
+}
+
+internal inline fun DependencyHandler.setupAndroidxTest(junitExt: Any) {
+  add("androidTestImplementation", junitExt)
+}
