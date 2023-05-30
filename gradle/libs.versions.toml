@@ -4,32 +4,28 @@ androidxTestExt = "1.1.5"
 appcompat = "1.6.1"
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
-
 kotlin-core = "1.8.21"
 kotlin-detekt = "1.23.0"
 kotlin-ktlint-gradle = "11.3.2"
 kotlin-ktlint-source = "0.48.2"
-
 test-kotest = "5.6.2"
+test-junit-compose = "1.4.3"
 test-junit-core = "4.13.2"
 test-junit-engine = "5.9.3"
-test-junit-compose = "1.4.3"
 
 [plugins]
 gradle-dependency-handler-extensions = { id = "land.sungbin.dependency.handler.extensions", version.ref = "gradle-dependency-handler-extensions" }
-
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-core" }
 kotlin-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "kotlin-detekt" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-core" }
 kotlin-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "kotlin-ktlint-gradle" }
 
 [libraries]
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+detekt-plugin-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "kotlin-detekt" }
 gradle-android = { module = "com.android.tools.build:gradle", version.ref = "gradle-android" }
-
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-core" }
-
 # This isn't strictly used but allows Renovate to see us using the ktlint artifact
 kotlin-ktlint = { module = "com.pinterest:ktlint", version.ref = "kotlin-ktlint-source" }
 test-kotest-framework = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "test-kotest" }
@@ -37,4 +33,3 @@ test-kotest-assertion-core = { module = "io.kotest:kotest-assertions-core-jvm", 
 test-junit-core = { module = "junit:junit", version.ref = "test-junit-core" }
 test-junit-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "test-junit-engine" } # testRuntimeOnly
 test-junit-compose = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "test-junit-compose" } # androidTestImplementation
-detekt-plugin-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "kotlin-detekt" }
