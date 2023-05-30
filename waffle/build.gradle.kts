@@ -16,6 +16,8 @@
 
 plugins {
   donedone("android-library")
+  donedone("test-junit")
+  donedone("test-kotest")
 }
 
 android {
