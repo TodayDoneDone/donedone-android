@@ -34,7 +34,7 @@ class WaffleButton @JvmOverloads constructor(
         defStyleAttr = androidx.appcompat.R.attr.buttonStyle,
         defStyleRes = R.style.Waffle_Button,
       ) {
-        val viewStyle = getInt(R.styleable.WaffleButton_waffleButtonStyle, NONE)
+        val viewStyle = getInt(R.styleable.WaffleButton_waffleButtonStyle, if (attrs != null) 0 else NONE)
         if (viewStyle != NONE) {
           styleRes = WaffleViewStyle.getWaffleViewStyle(viewStyle).styleResId
         }
