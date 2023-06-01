@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatViewInflater
 import androidx.appcompat.widget.AppCompatButton
 import me.donedone.waffle.android.widget.WaffleButton
 
-open class WaffleViewInflater : AppCompatViewInflater() {
+class WaffleViewInflater : AppCompatViewInflater() {
 
   override fun createButton(context: Context, attrs: AttributeSet?): AppCompatButton {
     return WaffleButton(context, attrs)
