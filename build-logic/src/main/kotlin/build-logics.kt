@@ -101,6 +101,16 @@ internal class TestJUnitPlugin : BuildLogicPlugin({
       core = libs.findLibrary("test-junit-core").get(),
       engine = libs.findLibrary("test-junit-engine").get(),
     )
+  }
+})
+internal class TestKotestPlugin : BuildLogicPlugin({
+  useTestPlatformForTarget()
+  dependencies.add("testImplementation", libs.findLibrary("test-kotest-framework").get())
+})
+
+internal class AndroidTestJUnitPlugin : BuildLogicPlugin({
+  useTestPlatformForTarget()
+  dependencies {
     setupEspresso(
       espressoCore = libs.findLibrary("androidx-test-espresso-core").get(),
     )
@@ -108,10 +118,6 @@ internal class TestJUnitPlugin : BuildLogicPlugin({
       junitExt = libs.findLibrary("androidx-test-ext").get(),
     )
   }
-})
-internal class TestKotestPlugin : BuildLogicPlugin({
-  useTestPlatformForTarget()
-  dependencies.add("testImplementation", libs.findLibrary("test-kotest-framework").get())
 })
 
 // ref: https://kotest.io/docs/quickstart#test-framework
