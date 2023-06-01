@@ -1,6 +1,7 @@
 [versions]
 androidxEspresso = "3.5.1"
-androidxTestExt = "1.1.5"
+androidx-espresso = "3.5.1"
+androidx-junit-ext = "1.1.5"
 appcompat = "1.6.1"
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
