@@ -10,10 +10,6 @@ import me.donedone.waffle.android.test.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-/**
- * Adb command for run
- *  adb shell am start -n me.donedone.waffle.android.test/me.donedone.waffle.android.widget.WaffleButtonTestActivity
- */
 class WaffleButtonTestActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
