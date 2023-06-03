@@ -8,7 +8,7 @@
 <resources>
     <style name="WaffleTheme" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/color_primary_blue_01</item>
-        <item name="viewInflaterClass">me.donedone.waffle.android.app.WaffleViewInflater</item>
+        <item name="viewInflaterClass">me.donedone.waffle.android.widget.app.WaffleViewInflater</item>
     </style>
 
 </resources>

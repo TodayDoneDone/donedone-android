@@ -16,10 +16,17 @@
 
 plugins {
   donedone("android-library")
+  donedone("test-junit")
+  donedone("test-kotest")
+  donedone("android-test-junit")
 }
 
 android {
   namespace = "me.donedone.waffle.android"
+
+  defaultConfig {
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+  }
 }
 
 dependencies {

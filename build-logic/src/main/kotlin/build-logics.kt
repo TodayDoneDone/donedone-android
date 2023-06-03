@@ -18,6 +18,8 @@ import internal.configureGmd
 import internal.libs
 import internal.androidExtensions
 import internal.isAndroidProject
+import internal.setupAndroidxTest
+import internal.setupEspresso
 import internal.setupJunit
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -104,6 +106,18 @@ internal class TestJUnitPlugin : BuildLogicPlugin({
 internal class TestKotestPlugin : BuildLogicPlugin({
   useTestPlatformForTarget()
   dependencies.add("testImplementation", libs.findLibrary("test-kotest-framework").get())
+})
+
+internal class AndroidTestJUnitPlugin : BuildLogicPlugin({
+  useTestPlatformForTarget()
+  dependencies {
+    setupEspresso(
+      espressoCore = libs.findLibrary("androidx-test-espresso-core").get(),
+    )
+    setupAndroidxTest(
+      junitExt = libs.findLibrary("androidx-test-ext").get(),
+    )
+  }
 })
 
 // ref: https://kotest.io/docs/quickstart#test-framework

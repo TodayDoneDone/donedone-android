@@ -21,6 +21,7 @@ gradlePlugin {
     "JvmKotlinPlugin" to "jvm-kotlin",
     "TestJUnitPlugin" to "test-junit",
     "TestKotestPlugin" to "test-kotest",
+    "AndroidTestJUnitPlugin" to "android-test-junit",
   )
 
   plugins {
