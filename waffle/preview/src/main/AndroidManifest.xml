@@ -10,7 +10,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:label="WaffleCatalog"
+        android:label="WafflePreview"
         android:theme="@style/WaffleTheme"
         tools:ignore="MissingApplicationIcon">
 
@@ -26,6 +26,7 @@
         </activity>
         <activity
             android:name=".button.WaffleButtonActivity"
+            android:label="Waffle Button Activity"
             android:exported="false" />
     </application>
 
