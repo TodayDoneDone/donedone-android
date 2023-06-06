@@ -3,6 +3,7 @@ androidx-espresso = "3.5.1"
 androidx-junit-ext = "1.1.5"
 androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
+
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
 
