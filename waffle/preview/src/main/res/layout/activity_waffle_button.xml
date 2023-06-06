@@ -5,68 +5,94 @@
   ~ Licensed under the MIT.
   ~ Please see full license: https://github.com/TodayDoneDone/donedone-android/blob/main/LICENSE
   -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:text="button"
+        app:layout_constraintBottom_toTopOf="@id/btn_default"
+        app:layout_constraintEnd_toStartOf="@id/wf_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="button" />
+    <me.donedone.waffle.android.widget.WaffleButton
+        android:id="@+id/wf_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"
+        app:layout_constraintBottom_toTopOf="@id/wf_btn_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <me.donedone.waffle.android.widget.WaffleButton
-            android:id="@+id/wf_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="button" />
+    <Button
+        android:id="@+id/btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default button"
+        app:layout_constraintBottom_toTopOf="@id/btn_done"
+        app:layout_constraintEnd_toStartOf="@id/wf_btn_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:waffleButtonStyle="Default" />
 
-        <Button
-            android:id="@+id/btn_default"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="default button"
-            app:waffleButtonStyle="Default" />
+    <me.donedone.waffle.android.widget.WaffleButton
+        android:id="@+id/wf_btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="default button"
+        app:layout_constraintBottom_toTopOf="@id/wf_btn_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_default"
+        app:layout_constraintTop_toBottomOf="@id/wf_btn"
+        app:waffleButtonStyle="Default" />
 
-        <me.donedone.waffle.android.widget.WaffleButton
-            android:id="@+id/wf_btn_default"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="default button"
-            app:waffleButtonStyle="Default" />
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="done button"
+        app:layout_constraintBottom_toTopOf="@id/btn_primary"
+        app:layout_constraintEnd_toStartOf="@id/wf_btn_done"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_default"
+        app:waffleButtonStyle="Done" />
 
-        <Button
-            android:id="@+id/btn_done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="done button"
-            app:waffleButtonStyle="Done" />
+    <me.donedone.waffle.android.widget.WaffleButton
+        android:id="@+id/wf_btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="done button"
+        app:layout_constraintBottom_toTopOf="@id/wf_btn_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_done"
+        app:layout_constraintTop_toBottomOf="@id/wf_btn_default"
+        app:waffleButtonStyle="Done" />
 
-        <me.donedone.waffle.android.widget.WaffleButton
-            android:id="@+id/wf_btn_done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="done button"
-            app:waffleButtonStyle="Done" />
+    <Button
+        android:id="@+id/btn_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="primary button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wf_btn_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_done"
+        app:waffleButtonStyle="Primary" />
 
-        <Button
-            android:id="@+id/btnPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="primary button"
-            app:waffleButtonStyle="Primary" />
-
-        <me.donedone.waffle.android.widget.WaffleButton
-            android:id="@+id/wf_btnPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="primary button"
-            app:waffleButtonStyle="Primary" />
-    </LinearLayout>
-</ScrollView>
+    <me.donedone.waffle.android.widget.WaffleButton
+        android:id="@+id/wf_btn_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="primary button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_primary"
+        app:layout_constraintTop_toBottomOf="@id/wf_btn_done"
+        app:waffleButtonStyle="Primary" />
+</androidx.constraintlayout.widget.ConstraintLayout>
