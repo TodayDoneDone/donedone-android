@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
   private fun getSampleItemList(): List<SampleItem> {
     val df = DexFile(packageCodePath)
     return df.entries().toList()
-      .filter { it.contains(this.packageName) }
-      .mapNotNull {
+      .filter { className -> className.contains(this.packageName) }
+      .mapNotNull { className ->
         try {
-          Class.forName(it)
+          Class.forName(className)
         } catch (_: ClassNotFoundException) {
           null
         } catch (_: ExceptionInInitializerError) {
@@ -44,12 +44,12 @@ class MainActivity : AppCompatActivity() {
         } catch (_: LinkageError) {
           null
         }
-      }.mapNotNull {
-        it.getAnnotation(WaffleSample::class.java)?.run {
-          this to it
+      }.mapNotNull { clazz ->
+        clazz.getAnnotation(WaffleSample::class.java)?.run {
+          this to clazz
         }
-      }.map {
-        SampleItem(it.first.title, it.second)
+      }.map { pairItem: Pair<WaffleSample, Class<*>> ->
+        SampleItem(pairItem.first.title, pairItem.second)
       }
   }
 
