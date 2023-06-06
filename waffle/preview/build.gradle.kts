@@ -23,6 +23,6 @@ android {
 dependencies {
   implementation(projects.waffle)
 
-  implementation(libs.appcompat)
+  implementation(libs.androidx.appcompat)
   implementation(libs.androidx.constraintlayout)
 }

@@ -1,8 +1,8 @@
 [versions]
 androidx-espresso = "3.5.1"
 androidx-junit-ext = "1.1.5"
+androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
-appcompat = "1.6.1"
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
 
@@ -26,8 +26,8 @@ kotlin-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "kotlin-kt
 [libraries]
 androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-espresso" }
 androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidx-junit-ext" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 gradle-android = { module = "com.android.tools.build:gradle", version.ref = "gradle-android" }
 
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-core" }
