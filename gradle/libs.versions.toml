@@ -29,6 +29,7 @@ androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espres
 androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidx-junit-ext" }
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+
 gradle-android = { module = "com.android.tools.build:gradle", version.ref = "gradle-android" }
 
 kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-core" }
