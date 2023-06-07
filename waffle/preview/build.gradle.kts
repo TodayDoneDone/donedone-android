@@ -12,11 +12,17 @@ plugins {
 }
 
 android {
-  namespace = "me.donedone.android"
+  namespace = "me.donedone.waffle.preview"
+
+  buildFeatures {
+    viewBinding = true
+    dataBinding = true
+  }
 }
 
 dependencies {
-  implementation(project(":waffle"))
+  implementation(projects.waffle)
 
   implementation(libs.androidx.appcompat)
+  implementation(libs.androidx.constraintlayout)
 }

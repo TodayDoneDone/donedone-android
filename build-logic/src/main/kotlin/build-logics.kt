@@ -112,10 +112,10 @@ internal class AndroidTestJUnitPlugin : BuildLogicPlugin({
   useTestPlatformForTarget()
   dependencies {
     setupEspresso(
-      espressoCore = libs.findLibrary("androidx-test-espresso-core").get(),
+      espressoCore = libs.findLibrary("test-espresso-core").get(),
     )
     setupAndroidxTest(
-      junitExt = libs.findLibrary("androidx-test-ext").get(),
+      junitExt = libs.findLibrary("test-junit-ktx").get(),
     )
   }
 })
