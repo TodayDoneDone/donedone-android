@@ -46,10 +46,10 @@ class WaffleCircularProgressDrawable : Drawable() {
     isAntiAlias = true
   }
 
-  private var ratio: Float = 0f
+  private var ratio = 0f
 
   private var animator: ValueAnimator? = null
-  private val drawBounds: RectF = RectF()
+  private val drawBounds = RectF()
   override fun draw(canvas: Canvas) {
     canvas.drawArc(
       drawBounds,
@@ -93,7 +93,7 @@ class WaffleCircularProgressDrawable : Drawable() {
   }
 
   @Deprecated("Deprecated in Java")
-  override fun getOpacity(): Int = primaryPaint.alpha
+  override fun getOpacity() = primaryPaint.alpha
 
   fun setRatio(to: Float) {
     CoroutineScope(Dispatchers.Main.immediate).launch {
