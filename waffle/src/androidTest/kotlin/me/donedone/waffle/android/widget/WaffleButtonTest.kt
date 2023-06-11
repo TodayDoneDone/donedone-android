@@ -45,19 +45,19 @@ class WaffleButtonTest {
   }
 
   @Test
-  fun testConstructorWithNullContext1() {
+  fun testConstructorWithContext1() {
     WaffleButton(context)
     Assert.assertTrue(true)
   }
 
   @Test
-  fun testConstructorWithNullContext2() {
+  fun testConstructorWithContext2() {
     WaffleButton(context, null)
     Assert.assertTrue(true)
   }
 
   @Test
-  fun testConstructorWithNullContext3() {
+  fun testConstructorWithContext3() {
     WaffleButton(context, null, -1)
     Assert.assertTrue(true)
   }
