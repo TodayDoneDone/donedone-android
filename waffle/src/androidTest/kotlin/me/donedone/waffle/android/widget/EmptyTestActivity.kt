@@ -6,13 +6,6 @@
  */
 package me.donedone.waffle.android.widget
 
-import me.donedone.waffle.android.test.R
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class EmptyTestActivity : AppCompatActivity() {
-
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-  }
-}
+class EmptyTestActivity : AppCompatActivity()
