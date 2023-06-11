@@ -96,7 +96,7 @@ class WaffleCircularProgressDrawable : Drawable() {
   override fun getOpacity(): Int = primaryPaint.alpha
 
   fun setRatio(to: Float) {
-    CoroutineScope(Dispatchers.Main).launch {
+    CoroutineScope(Dispatchers.Main.immediate).launch {
       animator?.end()
       animator = ValueAnimator.ofFloat(ratio, to.coerceIn(0f, 1f))
         .setDuration(DURATION_ANIMATION)
