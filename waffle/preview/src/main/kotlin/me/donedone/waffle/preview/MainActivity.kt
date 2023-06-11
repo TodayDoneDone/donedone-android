@@ -9,14 +9,21 @@ package me.donedone.waffle.preview
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.pm.PackageManager.ResolveInfoFlags
+import android.content.pm.ResolveInfo
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import dalvik.system.DexFile
 import me.donedone.waffle.preview.annotations.WaffleSample
 import me.donedone.waffle.preview.databinding.ActivityMainBinding
 import me.donedone.waffle.preview.databinding.ListItemSampleBinding
 
 class MainActivity : AppCompatActivity() {
+
+  companion object {
+    const val INTENT_ACTION_SAMPLE = "me.donedone.waffle.preview.SAMPLE"
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -31,10 +38,26 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun getSampleItemList(): List<SampleItem> {
-    val df = DexFile(packageCodePath)
-    return df.entries().toList()
-      .filter { className -> className.contains(this.packageName) }
-      .mapNotNull { className ->
+    val queryIntentActivitiesCompat: (Intent) -> List<ResolveInfo> =
+      { intent ->
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+          packageManager.queryIntentActivities(
+            intent,
+            ResolveInfoFlags.of(
+              PackageManager.GET_ACTIVITIES.toLong(),
+            ),
+          )
+        } else {
+          packageManager.queryIntentActivities(intent, 0)
+        }
+      }
+
+    return queryIntentActivitiesCompat(Intent(INTENT_ACTION_SAMPLE)).asSequence()
+      .filter { resolveInfo ->
+        resolveInfo.activityInfo.packageName?.contains(this.packageName) ?: false
+      }.mapNotNull {
+        it.activityInfo.name
+      }.mapNotNull { className ->
         try {
           Class.forName(className)
         } catch (_: ClassNotFoundException) {
@@ -50,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         }
       }.map { pairItem: Pair<WaffleSample, Class<*>> ->
         SampleItem(pairItem.first.title, pairItem.second)
-      }
+      }.toList()
   }
 
   private fun SampleItem.toViewModel(context: Context): SampleViewModel {

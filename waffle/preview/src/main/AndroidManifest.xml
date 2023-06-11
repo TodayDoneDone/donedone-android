@@ -27,7 +27,15 @@
         <activity
             android:name=".button.WaffleButtonActivity"
             android:label="Waffle Button Activity"
-            android:exported="false" />
+            android:exported="false" >
+
+            <intent-filter>
+                <action android:name="me.donedone.waffle.preview.SAMPLE" />
+            </intent-filter>
+        </activity>
     </application>
 
+    <queries>
+        <package android:name="me.donedone.waffle.preview" />
+    </queries>
 </manifest>
