@@ -35,12 +35,12 @@ class WaffleCountView @JvmOverloads constructor(
   defStyleAttr,
 ) {
   companion object {
-    val DEFAULT_COLOR_RES_ALERT = R.color.color_state_alert
-    val DEFAULT_COLOR_RES_NORMAL = R.color.color_base_black_01
-    val DEFAULT_COLOR_RES_EMPTY = R.color.color_base_gray_01
+    private val DEFAULT_COLOR_RES_ALERT = R.color.color_state_alert
+    private val DEFAULT_COLOR_RES_NORMAL = R.color.color_base_black_01
+    private val DEFAULT_COLOR_RES_EMPTY = R.color.color_base_gray_01
 
-    const val DEFAULT_MAX_COUNT = 20
-    const val DP_SIZE_PROGRESS = 16f
+    private const val DEFAULT_MAX_COUNT = 20
+    private const val DP_SIZE_PROGRESS = 16f
   }
 
   private val maxCount: Int

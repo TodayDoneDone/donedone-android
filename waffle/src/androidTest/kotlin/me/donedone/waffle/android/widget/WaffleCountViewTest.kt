@@ -16,9 +16,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.activityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import me.donedone.waffle.android.widget.WaffleCountView.Companion.DEFAULT_COLOR_RES_ALERT
-import me.donedone.waffle.android.widget.WaffleCountView.Companion.DEFAULT_COLOR_RES_EMPTY
-import me.donedone.waffle.android.widget.WaffleCountView.Companion.DEFAULT_COLOR_RES_NORMAL
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -76,7 +73,7 @@ class WaffleCountViewTest {
       activity.findViewById(me.donedone.waffle.android.test.R.id.count_view)
     Assert.assertEquals(WaffleCountView::class.java, countView::class.java)
     Assert.assertEquals(
-      ContextCompat.getColor(context, DEFAULT_COLOR_RES_NORMAL),
+      ContextCompat.getColor(context, me.donedone.waffle.android.R.color.color_base_black_01),
       countView.textColors.defaultColor,
     )
   }
@@ -113,7 +110,7 @@ class WaffleCountViewTest {
           spans.size,
         )
         Assert.assertEquals(
-          ContextCompat.getColor(context, DEFAULT_COLOR_RES_EMPTY),
+          ContextCompat.getColor(context, me.donedone.waffle.android.R.color.color_base_gray_01),
           spans[0].foregroundColor,
         )
       }
@@ -137,7 +134,7 @@ class WaffleCountViewTest {
           spans.size,
         )
         Assert.assertEquals(
-          ContextCompat.getColor(context, DEFAULT_COLOR_RES_ALERT),
+          ContextCompat.getColor(context, me.donedone.waffle.android.R.color.color_state_alert),
           spans[0].foregroundColor,
         )
       }
