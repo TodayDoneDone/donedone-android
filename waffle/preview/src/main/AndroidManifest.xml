@@ -26,8 +26,12 @@
         </activity>
         <activity
             android:name=".button.WaffleButtonActivity"
-            android:label="Waffle Button Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Waffle Button Activity" />
+        <activity
+            android:name=".textinput.WaffleCountViewActivity"
+            android:exported="false"
+            android:label="Waffle TextLengthInfo Activity" />
     </application>
 
 </manifest>
