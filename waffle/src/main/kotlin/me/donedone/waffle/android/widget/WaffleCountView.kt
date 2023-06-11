@@ -58,7 +58,7 @@ class WaffleCountView @JvmOverloads constructor(
     val colorAlert: Int
     val colorEmpty: Int
     val colorNormal: Int
-    val count: Int
+    val initialCount: Int
     context.obtainStyledAttributes(attrs, R.styleable.WaffleCountView).use { ta ->
       colorAlert =
         ta.getColor(
@@ -80,7 +80,7 @@ class WaffleCountView @JvmOverloads constructor(
           R.styleable.WaffleCountView_maxCount,
           DEFAULT_MAX_COUNT,
         )
-      count =
+      initialCount =
         ta.getInt(
           R.styleable.WaffleCountView_count,
           DEFAULT_MAX_COUNT,
@@ -109,7 +109,7 @@ class WaffleCountView @JvmOverloads constructor(
         else -> statusNormal
       }
     }
-    setValue(count)
+    setValue(initialCount)
     minHeight = DP_SIZE_PROGRESS.toPx()
   }
 
