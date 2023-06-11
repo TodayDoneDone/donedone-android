@@ -144,7 +144,11 @@ class WaffleCountView @JvmOverloads constructor(
     @ColorInt val progressTint: Int,
   ) {
     fun getSpannable(count: Int, maxCount: Int): CharSequence {
-      val spannable = SpannableStringBuilder("$count / $maxCount")
+      val result = "$count / $maxCount"
+      if (pointTextColor == textColor) {
+        return result
+      }
+      val spannable = SpannableStringBuilder(result)
         .apply {
           setSpan(
             ForegroundColorSpan(pointTextColor),
