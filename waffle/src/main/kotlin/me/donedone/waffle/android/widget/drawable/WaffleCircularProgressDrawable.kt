@@ -16,6 +16,9 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.RectF
 import android.graphics.drawable.Drawable
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class WaffleCircularProgressDrawable : Drawable() {
   companion object {
@@ -93,15 +96,17 @@ class WaffleCircularProgressDrawable : Drawable() {
   override fun getOpacity(): Int = primaryPaint.alpha
 
   fun setRatio(to: Float) {
-    animator?.end()
-    animator = ValueAnimator.ofFloat(ratio, to.coerceIn(0f, 1f))
-      .setDuration(DURATION_ANIMATION)
-      .apply {
-        addUpdateListener {
-          ratio = it.animatedValue as Float
-          invalidateSelf()
+    CoroutineScope(Dispatchers.Main).launch {
+      animator?.end()
+      animator = ValueAnimator.ofFloat(ratio, to.coerceIn(0f, 1f))
+        .setDuration(DURATION_ANIMATION)
+        .apply {
+          addUpdateListener {
+            ratio = it.animatedValue as Float
+            invalidateSelf()
+          }
+          start()
         }
-        start()
-      }
+    }
   }
 }
