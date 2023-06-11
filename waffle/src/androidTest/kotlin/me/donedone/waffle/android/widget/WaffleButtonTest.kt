@@ -14,6 +14,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.activityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import me.donedone.waffle.android.test.R
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -24,15 +25,16 @@ import org.junit.runner.RunWith
 class WaffleButtonTest {
 
   @get:Rule
-  val activityScenarioRule = activityScenarioRule<WaffleButtonTestActivity>()
+  val activityScenarioRule = activityScenarioRule<EmptyTestActivity>()
 
-  private lateinit var activity: WaffleButtonTestActivity
+  private lateinit var activity: EmptyTestActivity
 
   private val context: Context = InstrumentationRegistry.getInstrumentation().context
 
   @Before
   fun setup() {
     activityScenarioRule.scenario.onActivity {
+      it.setContentView(R.layout.activity_waffle_button_test)
       this.activity = it
     }
   }
