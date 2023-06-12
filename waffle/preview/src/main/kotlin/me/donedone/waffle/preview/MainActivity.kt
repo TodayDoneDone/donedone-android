@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
           this to clazz
         }
       }.map { pairItem: Pair<WaffleSample, Class<*>> ->
-        SampleItem(pairItem.first.title, pairItem.second)
+        SampleItem(pairItem.first.displayName, pairItem.second)
       }.toList()
   }
 

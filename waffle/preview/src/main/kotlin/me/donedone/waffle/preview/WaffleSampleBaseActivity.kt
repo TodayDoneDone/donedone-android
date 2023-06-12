@@ -25,7 +25,7 @@ open class WaffleSampleBaseActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     this.javaClass.getAnnotation(WaffleSample::class.java)?.let { waffleSample ->
-      title = waffleSample.title
+      title = waffleSample.displayName
     }
 
     supportActionBar?.setDisplayHomeAsUpEnabled(true)

@@ -11,7 +11,7 @@ import me.donedone.waffle.preview.WaffleSampleBaseActivity
 import me.donedone.waffle.preview.annotations.WaffleSample
 import me.donedone.waffle.preview.databinding.ActivityWaffleButtonBinding
 
-@WaffleSample(title = "Waffle Button Sample")
+@WaffleSample(displayName = "Waffle Button Sample")
 class WaffleButtonActivity : WaffleSampleBaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
