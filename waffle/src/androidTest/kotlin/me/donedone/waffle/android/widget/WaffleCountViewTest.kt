@@ -10,6 +10,7 @@ import android.content.Context
 import android.text.SpannedString
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -26,9 +27,9 @@ import org.junit.runner.RunWith
 class WaffleCountViewTest {
 
   @get:Rule
-  val activityScenarioRule = activityScenarioRule<EmptyTestActivity>()
+  val activityScenarioRule = activityScenarioRule<AppCompatActivity>()
 
-  private lateinit var activity: EmptyTestActivity
+  private lateinit var activity: AppCompatActivity
   private lateinit var waffleCountView: WaffleCountView
 
   private val context: Context = InstrumentationRegistry.getInstrumentation().context

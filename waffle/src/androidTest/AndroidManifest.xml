@@ -10,7 +10,7 @@
     <application
         android:theme="@style/WaffleTheme">
         <activity
-            android:name="me.donedone.waffle.android.widget.EmptyTestActivity"
+            android:name="androidx.appcompat.app.AppCompatActivity"
             android:exported="true" />
     </application>
 </manifest>

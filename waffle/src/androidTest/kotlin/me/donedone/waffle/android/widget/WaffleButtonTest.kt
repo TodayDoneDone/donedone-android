@@ -8,6 +8,7 @@ package me.donedone.waffle.android.widget
 
 import android.content.Context
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -25,9 +26,9 @@ import org.junit.runner.RunWith
 class WaffleButtonTest {
 
   @get:Rule
-  val activityScenarioRule = activityScenarioRule<EmptyTestActivity>()
+  val activityScenarioRule = activityScenarioRule<AppCompatActivity>()
 
-  private lateinit var activity: EmptyTestActivity
+  private lateinit var activity: AppCompatActivity
 
   private val context: Context = InstrumentationRegistry.getInstrumentation().context
 
