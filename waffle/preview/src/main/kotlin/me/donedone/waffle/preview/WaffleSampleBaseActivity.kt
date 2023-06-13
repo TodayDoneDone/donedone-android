@@ -24,7 +24,7 @@ open class WaffleSampleBaseActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    this.javaClass.getAnnotation(WaffleSample::class.java)?.let { waffleSample ->
+    javaClass.getAnnotation(WaffleSample::class.java)?.let { waffleSample ->
       title = waffleSample.displayName
     }
 
@@ -41,11 +41,11 @@ open class WaffleSampleBaseActivity : AppCompatActivity() {
       finish()
       return true
     }
-
     if (item == infoMenuItem) {
       Toast.makeText(this, this::class.java.simpleName, Toast.LENGTH_SHORT).show()
       return true
     }
+
     return super.onOptionsItemSelected(item)
   }
 }

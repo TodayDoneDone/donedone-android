@@ -22,7 +22,7 @@ import me.donedone.waffle.preview.databinding.ListItemSampleBinding
 class MainActivity : AppCompatActivity() {
 
   companion object {
-    const val INTENT_ACTION_SAMPLE = "me.donedone.waffle.preview.SAMPLE"
+    private const val INTENT_ACTION_SAMPLE = "me.donedone.waffle.preview.SAMPLE"
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
