@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
     return queryIntentActivitiesCompat(Intent(INTENT_ACTION_SAMPLE)).asSequence()
       .filter { resolveInfo ->
         resolveInfo.activityInfo.packageName?.startsWith(packageName) ?: false
-      }.mapNotNull {
-        it.activityInfo.name
+      }.mapNotNull { resolveInfo ->
+        resolveInfo.activityInfo.name
       }.mapNotNull { className ->
         try {
           Class.forName(className)
