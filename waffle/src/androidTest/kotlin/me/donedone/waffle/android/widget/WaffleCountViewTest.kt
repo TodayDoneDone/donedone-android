@@ -53,19 +53,16 @@ class WaffleCountViewTest {
   @Test
   fun testConstructorWithContext1() {
     WaffleCountView(context)
-    Assert.assertTrue(true)
   }
 
   @Test
   fun testConstructorWithContext2() {
     WaffleCountView(context, null)
-    Assert.assertTrue(true)
   }
 
   @Test
   fun testConstructorWithContext3() {
     WaffleCountView(context, null, -1)
-    Assert.assertTrue(true)
   }
 
   @Test
