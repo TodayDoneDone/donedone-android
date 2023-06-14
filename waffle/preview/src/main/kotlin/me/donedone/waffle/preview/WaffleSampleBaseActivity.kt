@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import me.donedone.waffle.preview.annotations.WaffleSample
 
 open class WaffleSampleBaseActivity : AppCompatActivity() {
-  companion object {
+  private companion object {
     const val MENU_INFO = "menu_info"
   }
 

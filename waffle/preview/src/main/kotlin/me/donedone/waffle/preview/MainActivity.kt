@@ -21,7 +21,7 @@ import me.donedone.waffle.preview.databinding.ListItemSampleBinding
 
 class MainActivity : AppCompatActivity() {
 
-  companion object {
+  private companion object {
     private const val INTENT_ACTION_SAMPLE = "me.donedone.waffle.preview.SAMPLE"
   }
 
