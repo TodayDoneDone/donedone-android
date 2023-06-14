@@ -34,7 +34,7 @@ class WaffleCountView @JvmOverloads constructor(
   attrs,
   defStyleAttr,
 ) {
-  companion object {
+  private companion object {
     private val DEFAULT_COLOR_RES_ALERT = R.color.color_state_alert
     private val DEFAULT_COLOR_RES_NORMAL = R.color.color_base_black_01
     private val DEFAULT_COLOR_RES_EMPTY = R.color.color_base_gray_01
@@ -138,7 +138,7 @@ class WaffleCountView @JvmOverloads constructor(
   private fun Float.toPx(): Int =
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, resources.displayMetrics).toInt()
 
-  class Status(
+  private class Status(
     @ColorInt val pointTextColor: Int,
     @ColorInt val textColor: Int,
     @ColorInt val progressTint: Int,

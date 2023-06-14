@@ -21,12 +21,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class WaffleCircularProgressDrawable : Drawable() {
-  companion object {
-    const val DURATION_ANIMATION = 300L
-    const val PROGRESS_WIDTH = 5f
-    const val DEGREE_0 = 0f
-    const val DEGREE_START = 270f
-    const val DEGREE_360 = 360f
+  private companion object {
+    private const val DURATION_ANIMATION = 300L
+    private const val PROGRESS_WIDTH = 5f
+    private const val DEGREE_0 = 0f
+    private const val DEGREE_START = 270f
+    private const val DEGREE_360 = 360f
   }
 
   private val primaryPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
