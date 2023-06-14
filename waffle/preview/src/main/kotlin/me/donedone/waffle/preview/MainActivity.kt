@@ -52,27 +52,24 @@ class MainActivity : AppCompatActivity() {
         }
       }
 
+    fun String.getClassOrNull() = try {
+      Class.forName(this)
+    } catch (_: ClassNotFoundException) {
+      null
+    } catch (_: ExceptionInInitializerError) {
+      null
+    } catch (_: LinkageError) {
+      null
+    }
+
     return queryIntentActivitiesCompat(Intent(INTENT_ACTION_SAMPLE)).asSequence()
       .filter { resolveInfo ->
         resolveInfo.activityInfo.packageName?.startsWith(packageName) ?: false
       }.mapNotNull { resolveInfo ->
-        resolveInfo.activityInfo.name
-      }.mapNotNull { className ->
-        try {
-          Class.forName(className)
-        } catch (_: ClassNotFoundException) {
-          null
-        } catch (_: ExceptionInInitializerError) {
-          null
-        } catch (_: LinkageError) {
-          null
-        }
-      }.mapNotNull { clazz ->
-        clazz.getAnnotation(WaffleSample::class.java)?.run {
-          this to clazz
-        }
-      }.map { pairItem: Pair<WaffleSample, Class<*>> ->
-        SampleItem(pairItem.first.displayName, pairItem.second)
+        val activityName = resolveInfo.activityInfo.name
+        val cls = activityName.getClassOrNull() ?: return@mapNotNull null
+        val waffleSample = cls.getAnnotation(WaffleSample::class.java) ?: return@mapNotNull null
+        SampleItem(waffleSample.displayName, cls)
       }.toList()
   }
 
