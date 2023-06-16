@@ -8,4 +8,12 @@
             <enum name="Done" value="2"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="WaffleCountView">
+        <attr name="colorEmpty" format="color"/>
+        <attr name="colorNormal" format="color"/>
+        <attr name="colorAlert" format="reference"/>
+        <attr name="maxCount" format="integer"/>
+        <attr name="count" format="integer"/>
+    </declare-styleable>
 </resources>
