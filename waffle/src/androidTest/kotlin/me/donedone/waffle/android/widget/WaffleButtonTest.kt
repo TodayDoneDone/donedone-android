@@ -8,12 +8,14 @@ package me.donedone.waffle.android.widget
 
 import android.content.Context
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.activityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import me.donedone.waffle.android.test.R
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
@@ -24,15 +26,16 @@ import org.junit.runner.RunWith
 class WaffleButtonTest {
 
   @get:Rule
-  val activityScenarioRule = activityScenarioRule<WaffleButtonTestActivity>()
+  val activityScenarioRule = activityScenarioRule<AppCompatActivity>()
 
-  private lateinit var activity: WaffleButtonTestActivity
+  private lateinit var activity: AppCompatActivity
 
   private val context: Context = InstrumentationRegistry.getInstrumentation().context
 
   @Before
   fun setup() {
     activityScenarioRule.scenario.onActivity {
+      it.setContentView(R.layout.activity_waffle_button_test)
       this.activity = it
     }
   }
@@ -45,21 +48,18 @@ class WaffleButtonTest {
   }
 
   @Test
-  fun testConstructorWithNullContext1() {
+  fun testConstructorWithContext1() {
     WaffleButton(context)
-    Assert.assertTrue(true)
   }
 
   @Test
-  fun testConstructorWithNullContext2() {
+  fun testConstructorWithContext2() {
     WaffleButton(context, null)
-    Assert.assertTrue(true)
   }
 
   @Test
-  fun testConstructorWithNullContext3() {
+  fun testConstructorWithContext3() {
     WaffleButton(context, null, -1)
-    Assert.assertTrue(true)
   }
 
   @Test

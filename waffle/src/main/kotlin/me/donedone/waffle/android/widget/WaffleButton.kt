@@ -22,7 +22,7 @@ class WaffleButton @JvmOverloads constructor(
 
   constructor(context: Context, viewStyle: WaffleViewStyle) : this(ContextThemeWrapper(context, viewStyle.styleResId))
 
-  companion object {
+  private companion object {
 
     private const val NONE = -1
 

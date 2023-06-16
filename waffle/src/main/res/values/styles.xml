@@ -34,4 +34,12 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/color_base_white_01</item>
     </style>
+
+    <style name="Waffle.CountView" parent="Widget.AppCompat.TextView">
+        <item name="colorEmpty">@color/color_base_gray_01</item>
+        <item name="colorNormal">@color/color_base_black_01</item>
+        <item name="colorAlert">@color/color_state_alert</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>
