@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     )
   }
 
-  data class SampleItem(val title: String, val cls: Class<*>)
+  private data class SampleItem(val title: String, val cls: Class<*>)
 
   data class SampleViewModel(val title: String, val action: Runnable)
 }
