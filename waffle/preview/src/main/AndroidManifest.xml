@@ -27,11 +27,24 @@
         <activity
             android:name=".button.WaffleButtonActivity"
             android:exported="false"
-            android:label="Waffle Button Activity" />
+            android:label="Waffle Button Activity" >
+
+            <intent-filter>
+                <action android:name="me.donedone.waffle.preview.SAMPLE" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".textinput.WaffleCountViewActivity"
             android:exported="false"
-            android:label="Waffle TextLengthInfo Activity" />
+            android:label="Waffle TextLengthInfo Activity" >
+
+            <intent-filter>
+                <action android:name="me.donedone.waffle.preview.SAMPLE" />
+            </intent-filter>
+        </activity>
     </application>
 
+    <queries>
+        <package android:name="me.donedone.waffle.preview" />
+    </queries>
 </manifest>

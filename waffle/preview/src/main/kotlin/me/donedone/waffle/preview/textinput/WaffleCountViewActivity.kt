@@ -13,7 +13,7 @@ import androidx.core.widget.doOnTextChanged
 import me.donedone.waffle.preview.annotations.WaffleSample
 import me.donedone.waffle.preview.databinding.ActivityWaffleCountViewBinding
 
-@WaffleSample(title = "TextLengthInfo Sample Activity")
+@WaffleSample(displayName = "TextLengthInfo Sample Activity")
 class WaffleCountViewActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

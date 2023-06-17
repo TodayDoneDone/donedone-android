@@ -66,7 +66,7 @@ class WaffleButtonTest {
   fun testButtonClick() {
     var clicked = 0
 
-    onView(withId(me.donedone.waffle.android.test.R.id.btn))
+    onView(withId(R.id.btn))
       .check { view, _ ->
         view.setOnClickListener {
           clicked += 1
@@ -80,7 +80,7 @@ class WaffleButtonTest {
 
   @Test
   fun testWaffleButtonInflate() {
-    val button: Button = activity.findViewById(me.donedone.waffle.android.test.R.id.btn)
+    val button: Button = activity.findViewById(R.id.btn)
     Assert.assertEquals(WaffleButton::class.java, button::class.java)
   }
 }

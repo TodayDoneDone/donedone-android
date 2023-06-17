@@ -9,4 +9,6 @@ package me.donedone.waffle.preview.annotations
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class WaffleSample(val title: String)
+annotation class WaffleSample(
+  val displayName: String,
+)
