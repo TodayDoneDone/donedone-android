@@ -9,7 +9,7 @@ gradle-dependency-handler-extensions = "1.1.0"
 
 kotlin-core = "1.9.0"
 kotlin-detekt = "1.23.1"
-kotlin-ktlint-gradle = "11.5.0"
+kotlin-ktlint-gradle = "11.5.1"
 kotlin-ktlint-source = "0.50.0"
 
 test-kotest = "5.6.2"
