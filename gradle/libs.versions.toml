@@ -7,7 +7,7 @@ androidx-constraintlayout = "2.1.4"
 gradle-android = "8.0.2"
 gradle-dependency-handler-extensions = "1.1.0"
 
-kotlin-core = "1.9.0"
+kotlin-core = "1.9.10"
 kotlin-detekt = "1.23.1"
 kotlin-ktlint-gradle = "11.5.1"
 kotlin-ktlint-source = "0.50.0"
