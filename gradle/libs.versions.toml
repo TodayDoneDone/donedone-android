@@ -12,7 +12,7 @@ kotlin-detekt = "1.23.1"
 kotlin-ktlint-gradle = "11.5.1"
 kotlin-ktlint-source = "0.50.0"
 
-test-kotest = "5.7.0"
+test-kotest = "5.7.1"
 test-junit-core = "4.13.2"
 test-junit-engine = "5.10.0"
 test-junit-compose = "1.5.0"
