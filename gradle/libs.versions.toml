@@ -4,7 +4,7 @@ androidx-junit-ext = "1.1.5"
 androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
 
-gradle-android = "8.0.2"
+gradle-android = "8.1.1"
 gradle-dependency-handler-extensions = "1.1.0"
 
 kotlin-core = "1.9.10"
